@@ -1,0 +1,61 @@
+<form action="{% url 'nomination' %}" method="post" class="forms" id="myForm" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="col-12 text-center">
+        <h3>File a Form</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>Nominee Name *</label>
+            <br>
+            <input type="text" placeholder="Enter your name..." name="nominee_name" required>
+        </div>
+        <div class="col-md-6">
+            <label>Nominee Phone Number *</label>
+            <br>
+            <input type="number" min="0" placeholder="Enter your phone number..." name="nominee_number" required>
+        </div>
+        <div class="col-md-6">
+            <label>Nominee Email *</label>
+            <br>
+            <input type="email" placeholder="Enter your email address..." name="nominee_email" required>
+        </div>
+        <div class="col-md-6">
+            <label>Nominee Location *</label>
+            <br>
+            <input type="text" placeholder="Enter your location..." name="nominee_location" required>
+        </div>
+        <div class="col-md-6">
+            <label>Select  Event *</label>
+            <br>
+            <select id="event" name="event">
+                <option value="miss_toss">Miss Toss</option>
+                <option value="miss_src">Miss SRC</option>
+                <option value="talent_expo">Talent Expo</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label>Category *</label>
+            <br>
+            <input type="text" placeholder="Enter your category..." name="category" required>
+        </div>
+        <div class="col-md-6">
+            <label>Social Media*</label>
+            <br>
+            <input type="text" placeholder="Enter your social media..." name="social_media" required>
+        </div>
+        <div class="col-md-6">
+            <label>Upload Picture *</label>
+            <br>
+            <input type="file" name="nominee_picture" required>
+        </div>
+        <div class="col-12">
+            <label>Reason for Filing</label>
+            <br>
+            <textarea name="reason_for_filing" cols="30" rows="10" placeholder="Enter your reason for filing"
+                required></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit">Proceed</button>
+        </div>
+    </div>
+</form>

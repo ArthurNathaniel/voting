@@ -1,0 +1,41 @@
+Terms and Conditions for Nathstack Electronic Voting and Ticketing Platform:
+
+Acceptance of Terms:
+By using the Nathstack electronic voting and ticketing platform ("the Platform"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, you should refrain from using the Platform.
+
+Service Description:
+Nathstack provides an electronic voting and ticketing platform that allows users to vote and purchase tickets for events. The Platform aims to enhance the convenience and confidentiality of the voting and ticketing process, breaking geographical boundaries.
+
+User Eligibility:
+You must be at least 18 years old or have the legal capacity to enter into a contract in your jurisdiction to use the Platform. By using the Platform, you represent and warrant that you meet these eligibility requirements.
+
+Voting and Ticketing Process:
+a. Confidentiality: Nathstack endeavors to maintain the confidentiality and security of your voting and ticketing information. However, while we implement reasonable measures to protect your data, we cannot guarantee absolute security.
+b. Accuracy: Users are responsible for ensuring the accuracy of their votes and ticket purchases. Nathstack will not be held liable for any errors or inaccuracies in the voting or ticketing process.
+
+Fees and Revenue Sharing:
+a. Ticket Purchase Fees: Users may be charged a fee for purchasing tickets through the Platform. The fee amount will be clearly displayed before the transaction is finalized.
+b. Revenue Sharing: Nathstack will take a 20% share of the profits generated from ticket sales at the end of the event. The profit calculation will be based on the total revenue generated from ticket sales minus any applicable taxes, transaction fees, and refunds.
+
+User Responsibilities:
+a. Accurate Information: Users must provide accurate and complete information during the registration, voting, and ticket purchase processes.
+b. Prohibited Activities: Users must not engage in any unlawful, fraudulent, or unauthorized activities while using the Platform. This includes but is not limited to hacking, tampering, or interfering with the Platform's operations or other users' activities.
+c. Compliance with Laws: Users must comply with all applicable laws, regulations, and legal obligations while using the Platform.
+
+Intellectual Property:
+a. Nathstack Ownership: The Platform and all associated intellectual property rights belong to Nathstack. Users are granted a limited, non-exclusive, non-transferable license to use the Platform for personal and non-commercial purposes.
+b. User Content: By using the Platform, you grant Nathstack a worldwide, royalty-free, perpetual, and irrevocable license to use, modify, reproduce, display, and distribute any content you provide through the Platform for the purpose of operating and improving the Platform.
+
+Limitation of Liability:
+Nathstack will not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with the use of the Platform or these Terms and Conditions. In jurisdictions where such limitations are not allowed, Nathstack's liability shall be limited to the maximum extent permitted by law.
+
+Modification of Terms:
+Nathstack reserves the right to modify these Terms and Conditions at any time. The modified terms will be effective immediately upon posting on the Platform. It is your responsibility to review the Terms and Conditions periodically for any changes.
+
+Termination:
+Nathstack may, at its discretion, suspend or terminate your access to the Platform at any time for violation of these Terms and Conditions or any applicable laws. Upon termination, your rights to use the Platform will cease immediately.
+
+Governing Law and Jurisdiction:
+These Terms and Conditions shall be governed by and construed in accordance with the laws of [Jurisdiction]. Any disputes arising out of or in connection with these Terms and Conditions shall be subject to the exclusive jurisdiction of the courts in [Jurisdiction].
+
+Please note that these Terms and Conditions are a general framework and may need to be tailored to the specific legal requirements and jurisdiction applicable to Nathstack's operations. It is advisable to consult with legal professionals to ensure compliance with local laws and regulations.

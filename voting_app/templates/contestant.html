@@ -1,0 +1,208 @@
+<!doctype html>
+{% load static%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Great Brains Voting</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contestant.css' %}">
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://placehold.jp/1800x400.png" alt="">
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="search_btn text-center">
+            <!-- <input type="text" id="searchQuery" placeholder="Enter your search query">
+        <button onclick="performSearch()">Search</button> -->
+            <input type="text" id="searchInput" onkeyup="search()" placeholder="Search for your preferred awards...">
+            <div id="noResults" style="display: none;">No search results found.</div>
+        </div>
+    </section>
+    <section>
+        <h1 class="text-center">CAST YOUR VOTE</h1>
+        <div class="cast" data-price="{{event.unit_price}}">
+            {% for nominee in event.get_nominees %}
+            <div class="vote">
+                <div class="card">
+                    <img class="card-img-top" src="{{nominee.picture.url}}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">{{nominee.name}}</h4>
+                        <p class="card-text"></p>
+                        <button class="vote_tab" style="color: white;">Click To Vote</button>
+                    </div>
+                </div>
+                <div class="num_box" data-nominee="{{nominee.name}}">
+                    <div>
+                        <span id="vote_sum">Ghc 5</span>
+                        <input type="number" placeholder="Votes" min="1" step="1" value="1">
+                        <button>Proceed</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% include 'footer.html' %}
+
+
+    <script>
+        const vote_tabs = document.querySelectorAll('.vote_tab')
+        const num_boxes = document.querySelectorAll('.num_box')
+
+        vote_tabs.forEach((tab,i)=>{
+            tab.onclick =()=>{
+                removeBoxes(num_boxes)
+                num_boxes[i].classList.add('change')
+            }
+        })
+
+        removeBoxes =()=>{
+            num_boxes.forEach(box=>{
+                box.classList.remove('change')
+            })
+        }
+    </script>
+    <script>
+        const price = document.querySelector('.cast').dataset.price
+
+        const nominees = document.querySelectorAll('.num_box')
+        const vote_sums = document.querySelectorAll('#vote_sum')
+        const vote_ins = document.querySelectorAll('.num_box input')
+
+
+
+        vote_ins.forEach((vote_in,i)=>{
+            console.log(nominees[i].dataset.nominee)
+            vote_in.oninput =()=>{
+                if(vote_in.value < 1){
+                    vote_in.value = 1
+                }
+                var sum = (vote_in.value * price)
+                vote_sums[i].innerHTML = `Ghc ${sum}`
+                
+            }
+        })
+    </script>
+
+    <style>
+        .vote {
+            position: relative;
+        }
+
+        #vote_sum {
+            padding: 5px;
+            width: 90%;
+            border-bottom: 1px solid black;
+        }
+
+        .vote .num_box {
+            position: absolute;
+            width: 95%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: 0.3s ease;
+            justify-content: center;
+            height: 430px;
+            height: 0;
+            background: rgba(0, 0, 0, 0.692);
+        }
+        .vote .num_box.change{
+            height: 430px;
+        }
+
+        .vote .num_box div {
+            display: none;
+            padding: 15px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            gap: 0.5rem;
+            background: white;
+        }
+        .vote .num_box.change div{
+            display: flex;
+        }
+
+        .vote .num_box div input {
+            width: 100px;
+            text-align: center;
+            font-size: 1.1rem;
+            height: 30px;
+            padding: 5px;
+            --moz-appearance: textfield;
+            appearance: textfield;
+        }
+
+        .vote .num_box div input::-webkit-inner-spin-button {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function search() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var items = document.getElementsByClassName('card');
+
+            var found = false;
+
+            for (var i = 0; i < items.length; i++) {
+                var itemText = items[i].textContent.toLowerCase();
+                if (itemText.includes(input)) {
+                    items[i].style.display = 'block';
+                    found = true;
+                } else {
+                    items[i].style.display = 'none';
+                }
+            }
+
+            if (!found) {
+                document.getElementById('noResults').style.display = 'block';
+            } else {
+                document.getElementById('noResults').style.display = 'none';
+            }
+        }
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

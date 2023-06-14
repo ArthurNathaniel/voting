@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Wix Madefor Text', sans-serif;
+text-decoration: none !important;
+
+}
+
+*{
+    text-decoration: none !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.navbar {
+    background-color: #fff;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-block: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-item a {
+    color: #000;
+}
+
+.nav-item a:hover {
+    font-weight: 600;
+}
+
+.why {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: 0 10%;
+    position: absolute;
+    top: -50px;
+    z-index: 50;
+}
+
+.us {
+    width: 95%;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: #fff;
+}
+
+.us h1 {
+    text-align: center;
+    color: #029e7f;
+}
+
+.us h5 {
+    text-align: center;
+}
+
+.search {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.search input {
+    height: 50px;
+    width: 400px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+
+.search button {
+    background-color: #029e7f;
+    padding: 12px 45px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.awards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 0 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.awards a{
+
+    text-decoration: none;
+}
+
+.card {
+    width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border: none;
+}
+.card img{
+    height: 300px;
+}
+
+
+
+footer{
+    background-color: #029e7f;
+    padding: 10px;
+    color: #fff;
+}
+
+
+ @media all and (max-width: 952px) {
+
+    .awards{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    .card{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top:50px ;
+        gap: 30px;
+    }
+
+ }
+
+
+ @media all and (max-width: 780px) {
+
+     .awards {
+         display: grid;
+         grid-template-columns: 1fr;
+     }
+
+ }

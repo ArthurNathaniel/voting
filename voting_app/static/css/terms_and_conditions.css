@@ -1,0 +1,11 @@
+.terms{
+    padding: 0 5%;
+    padding-block: 50px;
+    background-color: #f4f6f8;
+    width: 80%;
+    margin: 0 10%;
+    margin-block: 50px;
+}
+.title{
+    margin-bottom: 30px;
+}
